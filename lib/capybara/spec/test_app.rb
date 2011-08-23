@@ -86,6 +86,10 @@ class TestApp < Sinatra::Base
     request.cookies['capybara']
   end
 
+  get '/redirect_get_header' do
+    redirect '/get_header'
+  end
+
   get '/get_header' do
     env['HTTP_FOO']
   end
